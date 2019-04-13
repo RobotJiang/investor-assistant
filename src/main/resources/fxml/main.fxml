@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haoran.investor.MainController">
+   <children>
+      <StackPane layoutX="73.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tbStockList" prefHeight="319.0" prefWidth="596.0">
+              <columns>
+                  <TableColumn fx:id="colName" prefWidth="100" style="-fx-alignment: CENTER_LEFT" text="名称">
+                      <cellValueFactory><PropertyValueFactory property="name" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colPrice" prefWidth="100" style="-fx-alignment: CENTER_RIGHT" text="最新价">
+                      <cellValueFactory><PropertyValueFactory property="price" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colAmount" prefWidth="99.0" style="-fx-alignment: CENTER_RIGHT" text="涨跌额">
+                      <cellValueFactory><PropertyValueFactory property="changeAmount" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colChange" prefWidth="101.0" style="-fx-alignment: CENTER_RIGHT" text="涨跌幅">
+                      <cellValueFactory><PropertyValueFactory property="change" />
+                      </cellValueFactory>
+                  </TableColumn>
+
+              </columns>
+                <sortOrder>
+                    <fx:reference source="colName" />
+                </sortOrder>
+            </TableView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

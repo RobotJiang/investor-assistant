@@ -1,0 +1,6 @@
+.root {
+    -fx-font-color: red;
+}
+#tbStockList .table-column {
+    -fx-alignment: CENTER-RIGHT;
+}
