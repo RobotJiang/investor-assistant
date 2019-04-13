@@ -1,2 +1,10 @@
 language: java
 jdk: oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: gxjcPvq0NSmv2y4YKFn3URceczK+6qhkxf2flH6feq/dl9OmBghguHjXAlSiO23SeRU1EXgqMmf90KFRfo4PRemxhKKBT/FXJB70T7t21YVDojtiPMjDPulzZC4PZKxb0CY4BJGrzgXe1aesxPyf7e2/Ds6XjwG5cy4le3D0hIhKzAOc00I9RQNGA6lSjisxiCNdFQN/iafM0i1klAACWDPP4DbJflZIHYBzqk7IeRniPkuQ12g7d5LCEPLNS3XOK3BVvK9sfSixIze7dxj1nDezaJRuyx5+tmawPw4kxH3gT4uF4ZzTA/PCGe27e8MSC5vJbNJWeVSiI8FHw4R+iwHCFUAu5qgRtJCTj/Qm8H4PsFqFJBwIMlXyTC8rcy/cwOPy/npOdiBCCPNxjWydAm0mxznBqxOEGfFlDaNutJuRjojdnh9IuS/HSNJnZIVG1vq2QESVwn1NQY9IhQh3ixyCgwsqhVLQTTpl+XtrdwJJVoIQMVncUXKAfnY/8bSRDmrdbHhSUcz3C5RXWBjX8jGwbGJpT8TqS5sn3rBjBQNPG45TI7VfNb2efG/7C8gp5+jknXbQfso3PKwBw6Yc9BFa/uNebMp8J5uiBWCOuMEkW0gm9aHc7qB5i6kEyi9gGT57w0lk7yqWS8RIEowqfUbl4jihJ0/zhy0Z9XfmxP4=
+  file: '*.tar.gz'
+  on:
+    repo: RobotJiang/investor-assistant
+    tags: true
