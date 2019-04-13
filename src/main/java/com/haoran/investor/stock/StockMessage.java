@@ -13,15 +13,37 @@ import java.util.regex.Pattern;
 @Data
 public class StockMessage {
     private final static Pattern STOCK_CODE_PATTERN = Pattern.compile("[^\\d+](?<code>\\d+)");
-
+    /**
+     * 股票代码
+     */
     private String code;
+    /**
+     * 股票名称
+     */
     private String name;
+    /**
+     * 昨日收盘价
+     */
     private BigDecimal preClose;
+    /**
+     * 当前价格
+     */
     private BigDecimal price;
+    /**
+     * 涨跌幅
+     */
     private BigDecimal change;
+    /**
+     * 涨跌额
+     */
     private BigDecimal changeAmount;
 
 
+    /**
+     * 静态工厂方法，从字符串中提取股票信息
+     * @param quoStr
+     * @return
+     */
     public static StockMessage fromString(String quoStr) {
         String[] fieldArr = quoStr.split("=");
         StockMessage stockMessage = new StockMessage();

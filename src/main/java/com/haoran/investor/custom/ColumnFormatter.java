@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import java.text.Format;
 
 /**
+ * 通用列格式化器
  * @author Raymond
  * @date 2019/4/11
  */

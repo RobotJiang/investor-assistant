@@ -17,12 +17,12 @@ import java.util.concurrent.*;
  * @date 2019/4/9
  */
 public class MainApp extends Application {
-    private final static ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+    private final static ThreadFactory NAMED_THREAD_FACTORY = new ThreadFactoryBuilder()
         .setNameFormat("stock-async-job-pool-%d").build();
 
     public final static ExecutorService STOCK_FETCH_POOL = new ThreadPoolExecutor(5, 10,
         0L, TimeUnit.MILLISECONDS,
-        new LinkedBlockingDeque<>(20), namedThreadFactory, new ThreadPoolExecutor.DiscardOldestPolicy());
+        new LinkedBlockingDeque<>(20), NAMED_THREAD_FACTORY, new ThreadPoolExecutor.DiscardOldestPolicy());
 
     @Override
     public void start(Stage primaryStage) throws Exception {
